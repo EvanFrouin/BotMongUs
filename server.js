@@ -4,7 +4,7 @@ const botmongus = new Discord.Client();
 
 var idChannel = "YOUR_VOICE_CHANNEL_ID";
 var botToken = "YOUR_BOT_TOKEN";
-var webPort = 8888;
+var webPort = 8080;
 var players = [];
 var deadplayers = [];
 var now = new Date();
