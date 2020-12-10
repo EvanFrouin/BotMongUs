@@ -4,7 +4,7 @@ const Discord = require("discord.js");
 const botmongus = new Discord.Client();
 
 var idChannel = "YOUR_VOICE_CHANNEL_ID";
-var webPort = 80;
+var webPort = 8888;
 var players = [];
 var deadplayers = [];
 var now = new Date();

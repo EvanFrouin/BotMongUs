@@ -1,21 +1,19 @@
-[![Node.Js Connect Logo](https://sub1.kevinchisholm.com/blog/images/node-js-logo.png)](https://blog.kevinchisholm.com)
+# Install BotMongUs
 
-# Handling POST requests with Express and Node.js
+## Needed
 
-## Dependencies
-
-What you need to run this app:
 
 * [Node.Js](https://nodejs.org)
+* [A Discord Bot](https://www.howtogeek.com/364225/how-to-make-your-own-discord-bot/)
 
 ## Instructions
 
 ### Setup
 
-* Clone this repo:
+* Clone this repository:
 
 ````
-git clone https://github.com/kevinchisholm/handling-POST-requests-with-express-and-node.js.git
+git clone https://github.com/EvanFrouin/BotMongUs.git
 ````
 
 * Run this command:
@@ -24,17 +22,17 @@ git clone https://github.com/kevinchisholm/handling-POST-requests-with-express-a
 npm install
 ````
 
-* Run the following in your terminal:
+* Enter your Discord Bot Token in server.js
+* Enter your Voice Channel ID in server.js
+
+* Run this command:
 
 ````
 npm start
 ````
 
-* Point your browser to: **http://localhost:3000**
+* Go to: **http://localhost:8888**
 
-* Enter some text in the **First Name** and **Last Name** fields, and then click **Submit**.
-
-* **SUGGESTION** : Open-up your network panel in your browser dev tools and watch the **POST** request go out.
 
 
 
