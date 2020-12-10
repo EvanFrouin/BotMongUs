@@ -4,6 +4,7 @@ const Discord = require("discord.js");
 const botmongus = new Discord.Client();
 
 var idChannel = "YOUR_VOICE_CHANNEL_ID";
+var botToken = "YOUR_YOUR_BOT_TOKEN";
 var webPort = 8888;
 var players = [];
 var deadplayers = [];
@@ -15,7 +16,7 @@ console.log(`Logged in as ${botmongus.user.tag}!`);
 });
 
 
-botmongus.login('YOUR_BOT_TOKEN');
+botmongus.login(botToken);
 
 
 var express = require('express'),
