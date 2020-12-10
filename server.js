@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 const botmongus = new Discord.Client();
 
 var idChannel = "YOUR_VOICE_CHANNEL_ID";
-var botToken = "YOUR_YOUR_BOT_TOKEN";
+var botToken = "YOUR_BOT_TOKEN";
 var webPort = 8888;
 var players = [];
 var deadplayers = [];
