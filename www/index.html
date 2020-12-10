@@ -1,0 +1,239 @@
+<!DOCTYPE html> 
+<html>
+    <script type="text/javascript" src="js/form-handler.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+      @font-face {
+        font-family: 'AuFont';
+        src: url('aufont.ttf');
+                  }
+      .home {
+        background-color: black;
+      }
+
+      .titl{
+        text-align: center;
+        font-size: 70px;
+        font-weight: bolder;
+        color: white;
+        font-family: 'AuFont';
+
+
+      }
+      
+
+      .col-sm-2 {
+        position: relative;
+        width: 30%;
+        margin: 10px auto;
+        height: 10%;
+        font-size: 40px;
+        padding: 20px;
+        background-color: lightgray;
+        border-radius: 5px;
+        text-align: center;
+        font-weight: bold;
+        font-family: 'AuFont';
+
+                }
+      .col-sm-3 {
+        
+        border-radius: 5px;
+        text-align: center;
+        vertical-align: middle;
+
+              }
+      .col-sm-4 {
+        position: relative;
+        width: 10%;
+        margin: 10px auto;
+        font-size: 40px;
+        padding: 1px;
+        background-color: lightgray;
+        border-radius: 5px;
+        text-align: center;
+        font-weight: bold;
+        font-family: 'AuFont';
+
+      }
+
+      .col-md-4 {
+        position: relative;
+        margin: 10px auto;
+        padding: 20px;
+        font-size: 40px;
+        background-color: grey;
+        color: white;
+        border-radius: 5px;
+        text-align: center;
+        font-weight: bold;
+        font-family: 'AuFont';
+                }
+
+      
+    </style>
+    <head> 
+        <meta charset="utf-8"> 
+        <title>BotMongUs</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+    </head>
+    <body class="home"> 
+        
+        <div class="container">
+          <div class="row titl">
+            BotMongUs
+          </div>
+          <div class="row">
+              <div class="col-sm-1"></div>
+              <div class="col-sm-1"></div>
+              <div class="col-sm-1"></div>
+              <div class="col-sm-1"></div>
+              <div class="col-sm-4" onclick="getPlayers()">Get Players</div>
+              <div class="col-sm-1"></div>
+              <div class="col-sm-1"></div>
+              <div class="col-sm-1"></div>
+              <div class="col-sm-1"></div>
+          </div>
+          <div class="row">
+              <div class="col-sm-1"></div>
+              <div class="col-sm-1"></div>
+              <div class="col-sm-2" onclick="setMute()">Mute</div>
+              <div class="col-sm-1"></div>
+              <div class="col-sm-2" onclick="endGame()">End</div>
+              <div class="col-sm-1"></div>
+              <div class="col-sm-2" onclick="setUnMute()">UnMute</div>
+              <div class="col-sm-1"></div>
+              <div class="col-sm-1"></div>
+          </div>
+          <div class="row">
+              <div class="col-md-1"></div>
+              <div class="col-md-4" id="j1">
+                  <div class="col-sm-5" id="p1">Joueur 1</div>
+                  <div class="col-sm-3" onclick="dead('0')">
+                    <img src="/images/dead.png" width="70%">
+                  </div>
+                  <div class="col-sm-1"></div>
+                  <div class="col-sm-3" onclick="revive('0')">
+                    <img src="/images/alive.png" width="70%">
+                  </div>
+              </div>
+              <div class="col-md-2"></div>
+              <div class="col-md-4" >
+                  <div class="col-sm-5" id="p2">Joueur 2</div>
+                  <div class="col-sm-3" onclick="dead('1')">
+                    <img src="/images/dead.png" width="70%">
+                  </div>
+                  <div class="col-sm-1"></div>
+                  <div class="col-sm-3" onclick="revive('1')">
+                    <img src="/images/alive.png" width="70%">
+                  </div>
+              </div>
+              <div class="col-md-1"></div>
+          </div>
+          <div class="row">
+              <div class="col-md-1"></div>
+              <div class="col-md-4" >
+                  <div class="col-sm-5" id="p3">Joueur 3</div>
+                  <div class="col-sm-3" onclick="dead('2')">
+                    <img src="/images/dead.png" width="70%">
+                  </div>
+                  <div class="col-sm-1"></div>
+                  <div class="col-sm-3" onclick="revive('2')">
+                    <img src="/images/alive.png" width="70%">
+                  </div>
+              </div>
+              <div class="col-md-2"></div>
+              <div class="col-md-4" >
+                  <div class="col-sm-5" id="p4">Joueur 4</div>
+                  <div class="col-sm-3" onclick="dead('3')">
+                    <img src="/images/dead.png" width="70%">
+                  </div>
+                  <div class="col-sm-1"></div>
+                  <div class="col-sm-3" onclick="revive('3')">
+                    <img src="/images/alive.png" width="70%">
+                  </div>
+              </div>
+              <div class="col-md-1"></div>
+          </div>
+          <div class="row">
+              <div class="col-md-1"></div>
+              <div class="col-md-4" >
+                  <div class="col-sm-5" id="p5">Joueur 5</div>
+                  <div class="col-sm-3" onclick="dead('4')">
+                    <img src="/images/dead.png" width="70%">
+                  </div>
+                  <div class="col-sm-1"></div>
+                  <div class="col-sm-3" onclick="revive('4')">
+                    <img src="/images/alive.png" width="70%">
+                  </div>
+              </div>
+              <div class="col-md-2"></div>
+              <div class="col-md-4" >
+                  <div class="col-sm-5" id="p6">Joueur 6</div>
+                  <div class="col-sm-3" onclick="dead('5')">
+                    <img src="/images/dead.png" width="70%">
+                  </div>
+                  <div class="col-sm-1"></div>
+                  <div class="col-sm-3" onclick="revive('5')">
+                    <img src="/images/alive.png" width="70%">
+                  </div>
+              </div>
+              <div class="col-md-1"></div>
+          </div>
+          <div class="row">
+              <div class="col-md-1"></div>
+              <div class="col-md-4" >
+                  <div class="col-sm-5" id="p7">Joueur 7</div>
+                  <div class="col-sm-3" onclick="dead('6')">
+                    <img src="/images/dead.png" width="70%">
+                  </div>
+                  <div class="col-sm-1"></div>
+                  <div class="col-sm-3" onclick="revive('6')">
+                    <img src="/images/alive.png" width="70%">
+                  </div>
+              </div>
+              <div class="col-md-2"></div>
+              <div class="col-md-4" >
+                  <div class="col-sm-5" id="p8">Joueur 8</div>
+                  <div class="col-sm-3" onclick="dead('7')">
+                    <img src="/images/dead.png" width="70%">
+                  </div>
+                  <div class="col-sm-1"></div>
+                  <div class="col-sm-3" onclick="revive('7')">
+                    <img src="/images/alive.png" width="70%">
+                  </div>
+              </div>
+              <div class="col-md-1"></div>
+          </div>
+          <div class="row">
+              <div class="col-md-1"></div>
+              <div class="col-md-4" >
+                  <div class="col-sm-5" id="p9">Joueur 9</div>
+                  <div class="col-sm-3" onclick="dead('8')">
+                    <img src="/images/dead.png" width="70%">
+                  </div>
+                  <div class="col-sm-1"></div>
+                  <div class="col-sm-3" onclick="revive('8')">
+                    <img src="/images/alive.png" width="70%">
+                  </div>
+              </div>
+              <div class="col-md-2"></div>
+              <div class="col-md-4" >
+                  <div class="col-sm-5" id="p10">Joueur 10</div>
+                  <div class="col-sm-3" onclick="dead('9')">
+                    <img src="/images/dead.png" width="70%">
+                  </div>
+                  <div class="col-sm-1"></div>
+                  <div class="col-sm-3" onclick="revive('9')">
+                    <img src="/images/alive.png" width="70%">
+                  </div>
+              </div>
+              <div class="col-md-1"></div>
+        </div>
+      </div>
+      <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+     
+    </body> 
+</html>
