@@ -1,5 +1,7 @@
 # BotMongUs
 
+![alt text](https://github.com/EvanFrouin/BotMongUs/blob/main/botmongus.png)
+
 ## Needed
 
 
