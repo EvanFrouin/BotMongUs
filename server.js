@@ -1,4 +1,3 @@
-//require the express nodejs module
 const Discord = require("discord.js");
 
 const botmongus = new Discord.Client();
