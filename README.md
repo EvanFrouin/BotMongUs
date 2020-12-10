@@ -32,7 +32,7 @@ npm start
 ````
 
 * Go to: **http://localhost:8080** if you are on the server
-**OR**
+* **OR**
 * Go to: **http://YOUR_SERVER_IP:8080** if you are on the server
 
 
