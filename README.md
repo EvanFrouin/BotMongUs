@@ -1,4 +1,4 @@
-# Install BotMongUs
+# BotMongUs
 
 ## Needed
 
