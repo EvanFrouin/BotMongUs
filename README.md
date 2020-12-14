@@ -54,7 +54,7 @@ npm start
 
 ### Warnings !!
 
-* Don't send to much request at once, be gentle !
+* Don't send to many requests at once, be gentle !
 * Wait for the debate to start to set a player as dead. If done too soon, it could give hints to crewmates !
 
 
